@@ -1,0 +1,23 @@
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  margin: 0px 50px;
+
+  img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.navItems {
+  display: flex;
+  gap: 40px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
