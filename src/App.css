@@ -1,0 +1,13 @@
+.green {
+  color: #55e6a5;
+}
+
+.heading {
+  border-bottom: 1px solid #55e6a5;
+}
+
+@media (max-width: 767px) {
+  .heading {
+    text-align: center;
+  }
+}

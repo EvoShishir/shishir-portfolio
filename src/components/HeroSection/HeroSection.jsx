@@ -9,7 +9,8 @@ const HeroSection = () => {
       <div>
         <div>
           <h1>
-            Hi, I&apos;m SHISHIR<span className="green">!</span>
+            Hi, I&apos;m SH<span className="green">i</span>SH
+            <span className="green">i</span>R<span className="green">!</span>
           </h1>
           <p className="title">
             I&apos;m a{" "}
@@ -23,10 +24,14 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="heroButtons">
-          <button>Contact Me</button>
           <button>
-            <a href="https://drive.google.com/file/d/1LczSc-i2H2ERGclWsmojIh4C1IZIrjhq/view?usp=drive_link">
-              My Resume <MdOutlineKeyboardDoubleArrowRight />
+            <a
+              href="https://drive.google.com/file/d/1LczSc-i2H2ERGclWsmojIh4C1IZIrjhq/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MY RESUME
+              <MdOutlineKeyboardDoubleArrowRight />
             </a>
           </button>
         </div>
