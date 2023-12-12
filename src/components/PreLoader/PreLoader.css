@@ -1,0 +1,37 @@
+.loading__container_true,
+.loading__container_false {
+  max-height: 100vh;
+  transition: height 0.5s linear;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.loading__text {
+  text-align: center;
+}
+
+.loading__text h2 {
+  font-family: "poppins";
+  font-size: 15px;
+}
+
+.loading__text span {
+  font-size: 20px;
+}
+
+.loading__container_false {
+  height: 0;
+}
+
+.loading__container_false .loading__text {
+  transition: opacity 0.15s linear;
+  opacity: 0;
+}

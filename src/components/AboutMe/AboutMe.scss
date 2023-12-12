@@ -1,5 +1,5 @@
 .about {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   margin-left: 70px;
   margin-right: 70px;
@@ -43,7 +43,7 @@
     align-items: center;
 
     img {
-      width: 80%;
+      width: 90%;
       border-radius: 50%;
     }
   }
@@ -62,11 +62,5 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .about {
     max-width: 1050px;
-  }
-}
-
-@media (max-width: 1366px) {
-  .about {
-    max-width: 1200px;
   }
 }

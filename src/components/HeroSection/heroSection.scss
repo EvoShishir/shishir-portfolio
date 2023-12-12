@@ -1,5 +1,5 @@
 .heroSection {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   margin-left: 70px;
   margin-right: 70px;
@@ -70,16 +70,19 @@
 @media (max-width: 767px) {
   .heroSection {
     max-width: 400px;
-    margin-right: 10px;
+    margin-right: 8px;
     margin-top: 80px;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
     gap: 0px;
     img {
-      width: 80%;
+      width: 90%;
     }
     h1 {
       font-size: 50px;
+      line-height: 55px;
     }
     .title {
       font-size: 20px;
@@ -108,13 +111,12 @@
 @media (min-width: 1200px) and (max-width: 1366px) {
   .heroSection {
     margin-top: 80px;
-    max-width: 1200px;
+    max-width: 1300px;
   }
 }
 
 @media (min-width: 1367px) {
   .heroSection {
-    max-width: 1200px;
     height: 100vh;
     margin-top: 10px;
   }

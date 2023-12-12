@@ -64,13 +64,13 @@ const Navbar = () => {
             to="skills"
             spy={true}
             smooth={true}
-            offset={-60}
+            offset={-53}
             duration={500}
           >
             Skills
           </Link>
           <Link
-            to="exprience"
+            to="experience"
             spy={true}
             smooth={true}
             offset={0}

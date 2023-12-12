@@ -6,8 +6,8 @@
 }
 
 .topNavbar {
-  max-width: 1200px;
   width: 100%;
+  z-index: 998;
   margin: auto;
   padding: 10px 0px;
   position: fixed;
@@ -31,21 +31,25 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.539);
     border-bottom: 2px solid rgba(255, 255, 255, 0);
-    transition: 400ms;
+    transition: 400ms ease-in-out;
   }
 
   a:hover {
     border-bottom: 2px solid #55e6a5;
     color: #55e6a5;
+    transform: translateY(-3px);
   }
 }
 
 .leftNavbar {
+  background-color: rgba(0, 0, 0, 0.304);
+  backdrop-filter: blur(10px);
+  z-index: 999;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 255px;
+  margin-top: 251px;
   margin-left: -273px;
   transform: rotate(90deg);
   img {
@@ -68,11 +72,11 @@
     color: rgba(255, 255, 255, 0.539);
     border-top: 2px solid rgba(255, 255, 255, 0);
     padding: 20px;
-    transition: 400ms;
+    transition: 400ms ease-in-out;
   }
   a:hover {
     border-top: 2px solid #55e6a5;
-    color: white;
+    color: #55e6a5;
   }
 }
 
