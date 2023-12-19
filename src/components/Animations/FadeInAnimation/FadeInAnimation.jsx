@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const FadeInAnimation = ({ index, children }) => {
+const FadeInAnimation = ({ index, duration, delay, children }) => {
   const fadeInAnimationVariants = {
     initial: {
       opacity: 0,
@@ -11,8 +11,9 @@ const FadeInAnimation = ({ index, children }) => {
       opacity: 1,
       y: 0,
       transition: {
+        duration: duration,
         ease: "easeInOut",
-        delay: index ? 0.03 * (index + 1) : 0.03,
+        delay: index ? delay * (index + 1) : delay,
       },
     }),
   };

@@ -1,9 +1,30 @@
 .green {
-  color: #55e6a5;
+  color: var(--accent);
 }
 
 .heading {
-  border-bottom: 1px solid #55e6a5;
+  border-bottom: 2px solid var(--accent);
+}
+
+li {
+  list-style-type: none;
+}
+
+ul li {
+  list-style-type: none;
+  margin-left: -20px;
+}
+
+ul li::before {
+  content: "\2022";
+  color: var(--accent);
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+.glitch {
+  font-family: "Space Mono", monospace;
 }
 
 @media (max-width: 767px) {

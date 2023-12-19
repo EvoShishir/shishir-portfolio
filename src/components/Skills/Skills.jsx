@@ -1,6 +1,5 @@
 import React from "react";
 import "./Skills.scss";
-import { motion } from "framer-motion";
 import { IoLogoFirebase, IoLogoJavascript } from "react-icons/io5";
 import {
   SiDjango,
@@ -91,27 +90,36 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills" className="skillsContainer">
-      <h1 className="heading">
-        Skills<span className="green">.</span>
-      </h1>
-      <div>
-        <h4>
-          Following are some of the <span className="green">skills</span> I have
-          gathered over the years
-        </h4>
-        <div className="skillContainer">
-          {skillsList.map((skill, index) => (
-            <div key={index} className="logo">
-              <FadeInAnimation isInView={true} index={index}>
-                <p>{skill.logo}</p>
-                <small>{skill.title}</small>
-              </FadeInAnimation>
+    <>
+      <FadeInAnimation isInView={true} index={1} delay={0.05} duration={1}>
+        <div id="skills" className="skillsContainer">
+          <h1 className="heading">
+            Skills<span className="green">.</span>
+          </h1>
+          <div>
+            <h4>
+              Following are some of the <span className="green">skills</span> I
+              have gathered over the years
+            </h4>
+            <div className="skillContainer">
+              {skillsList.map((skill, index) => (
+                <div key={index} className="logo">
+                  <FadeInAnimation
+                    isInView={true}
+                    index={index}
+                    duration={0.6}
+                    delay={0.03}
+                  >
+                    <p>{skill.logo}</p>
+                    <small>{skill.title}</small>
+                  </FadeInAnimation>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </FadeInAnimation>
+    </>
   );
 };
 

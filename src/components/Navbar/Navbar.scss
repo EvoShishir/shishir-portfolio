@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   font-size: 18px;
-  font-family: "POPPINS";
+  font-family: "poppins";
 }
 
 .topNavbar {
@@ -11,7 +11,7 @@
   margin: auto;
   padding: 10px 0px;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.181);
+  background-color: var(--navbarBackground);
   backdrop-filter: blur(10px);
   top: 0;
   left: 50%;
@@ -29,27 +29,27 @@
   gap: 20px;
   a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.539);
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    color: var(--navItemColor);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
     transition: 400ms ease-in-out;
   }
 
   a:hover {
-    border-bottom: 2px solid #55e6a5;
-    color: #55e6a5;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
     transform: translateY(-3px);
   }
 }
 
 .leftNavbar {
-  background-color: rgba(0, 0, 0, 0.304);
+  background-color: var(--navbarBackground);
   backdrop-filter: blur(10px);
   z-index: 999;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 251px;
+  margin-top: 252px;
   margin-left: -273px;
   transform: rotate(90deg);
   img {
@@ -64,19 +64,19 @@
   display: flex;
   cursor: pointer;
   .active {
-    border-top: 2px solid #55e6a5;
-    color: white;
+    border-top: 2px solid var(--accent);
+    color: var(--activeNavColor);
   }
   a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.539);
-    border-top: 2px solid rgba(255, 255, 255, 0);
+    color: var(--navItemColor);
+    border-top: 2px solid rgba(0, 0, 0, 0);
     padding: 20px;
     transition: 400ms ease-in-out;
   }
   a:hover {
-    border-top: 2px solid #55e6a5;
-    color: #55e6a5;
+    border-top: 2px solid var(--accent);
+    color: var(--accent);
   }
 }
 

@@ -27,8 +27,6 @@ const Banner = () => {
         <span>*</span>
         <span>python</span>
         <span>*</span>
-        <span>django</span>
-        <span>*</span>
         <span>django rest framework</span>
         <span>*</span>
       </div>

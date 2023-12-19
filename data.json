@@ -1,0 +1,114 @@
+{
+  "experiences": [
+    {
+      "company": "AAK TELE-SCIENCE, INC",
+      "link": "https://www.linkedin.com/company/aak-telesciences/mycompany/",
+      "position": "Frontend Developer(React.JS)",
+      "location": "Davis, CA",
+      "startDate": "September, 2023",
+      "endDate": "Present",
+      "responsibilities": [
+        "Designed and implemented responsive interfaces for optimal user experiences.",
+        "Proficient in using Redux for efficient data flow in complex applications.",
+        "Created and maintained modular, reusable components for streamlined development.",
+        "Implemented best practices for consistent experiences across browsers.",
+        "Worked closely with designers to translate mockups into interactive React components."
+      ]
+    },
+    {
+      "company": "Innovate Wave",
+      "link": "https://www.linkedin.com/company/innovate-wave/",
+      "position": "Fullstack Web Developer(MERN Stack, Intern)",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "March, 2023",
+      "endDate": "August, 2023",
+      "responsibilities": [
+        "Contributed to full-stack development and deployment of web applications.",
+        "Assisted in optimizing databases for efficient data handling.",
+        "Contributed to creating and integrating RESTful APIs.",
+        "Involved in developing user-friendly interfaces using modern frameworks.",
+        "Worked collaboratively in an Agile environment, participating in planning and iterative development."
+      ]
+    },
+    {
+      "company": "Freelance Web Dev",
+      "link": "https://bd.linkedin.com/in/atefarmanshishir/",
+      "position": "Fullstack Web Developer(MERN & Django)",
+      "location": "Worldwide",
+      "startDate": "February, 2022",
+      "endDate": "Present",
+      "responsibilities": [
+        "Led MERN and Django app development and deployment on cloud platforms.",
+        "Managed MongoDB and PostgreSQL databases, optimizing schemas for performance.",
+        "Developed RESTful APIs with Express.js as well as Django Rest Framework, integrating third-party APIs.",
+        "Created responsive interfaces with React.js, using Redux for state management.",
+        "Collaborated in Agile settings, ensuring timely delivery with cross-functional teams."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "ShopVibe",
+      "technologies": [
+        "React.JS",
+        "Redux",
+        "MaterialUI",
+        "Node.JS",
+        "Express.JS",
+        "MongoDB",
+        "Stripe"
+      ],
+      "description": "This store is built using React.JS for the frontend, Express.JS and Node.JS for thebackend. MongoDB is used for the database management system. The cartfunctionality is created by using Redux to store the cart items. Stripe payment is available in this application. Also some MaterialUI components are used for niceraesthetics.",
+      "features": [
+        "Uses can create account with their passwords hashed in the backend.",
+        "Users can add products to cart and then checkout using Stripe paymentgateway.",
+        "Admin can manage the products, categories and user roles. Also the analytics ofproducts and users is also available on admin panel dashboard."
+      ],
+      "sourceCode": {
+        "frontend": "https://github.com/EvoShishir/shopping-website",
+        "backend": "https://github.com/EvoShishir/shopping-server"
+      },
+      "liveProject": "https://shopping-website-shishir.netlify.app"
+    },
+    {
+      "name": "Modern Portfolio Website",
+      "technologies": ["React.JS", "Framer Motion", "Sass"],
+      "description": "Explore my React.js portfolio with sleek design, Framer Motion animations, and SASS styles. Seamlessly navigate a modern interface showcasing my tech skills and innovative projects, creating a dynamic and immersive user experience.",
+      "features": [
+        "Ensuring optimal user experience on any device, the website seamlessly adapts to varying screen sizes.",
+        "Elevating user engagement, dynamic Framer Motion animations bring a modern touch to the portfolio's visual appeal.",
+        "Crafted with SASS, the styles contribute to an elegant and cohesive design, reflecting a keen eye for aesthetics."
+      ],
+      "sourceCode": {
+        "frontend": "https://github.com/EvoShishir/shishir-portfolio"
+      },
+      "liveProject": "nai"
+    },
+    {
+      "name": "URL Shorty",
+      "technologies": ["Django", "Ajax", "SQlite"],
+      "description": "An URL shortener built using Django that will take care of long unbearable links and provide a uniquely made shortened URL, just for you, that will redirect you to your desired link. Very simple to use. Anyone can just paste a link and get it shortened for free. Links do not expire and stay the same way as you created.",
+      "features": [
+        "Very simple to use.",
+        "Anyone can just paste a link and get it shortened for free.",
+        "Links do not expire and stay the same way as you created."
+      ],
+      "sourceCode": {
+        "frontend": "https://github.com/EvoShishir/urlshorty"
+      }
+    },
+    {
+      "name": "E-commerce API",
+      "technologies": ["Django Rest Framework", "PostgreSQL"],
+      "description": "This is an e-commerce API built using the Django Rest Framework with the use of Python. It features user authentication where users need to confirm their email using a confirmation link during signup. Orders are tied to user accounts, and users can create orders based on their preferences. An account requires a unique phone number for registration, and passwords can be reset using email.",
+      "features": [
+        "An account requires a unique phone number to register.",
+        "Passwords can be reset using email."
+      ],
+      "sourceCode": {
+        "backend": "https://github.com/EvoShishir/EcommerceAPI"
+      }
+    }
+  ]
+}

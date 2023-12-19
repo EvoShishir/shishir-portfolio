@@ -1,0 +1,120 @@
+.projectsContainer {
+  font-family: "poppins";
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-bottom: 100px;
+  h1 {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 70px;
+    font-weight: 900;
+  }
+  h2 {
+    line-height: 24px;
+  }
+  a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color);
+    transition: 400ms;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bolder;
+  }
+  a:hover {
+    color: var(--activeNavColor);
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 1px;
+    width: 0;
+    left: 0;
+    background-color: var(--accent);
+    transition: 400ms;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+}
+
+.singleProject {
+  border-left: 1px solid var(--accent);
+  padding: 0px 30px;
+}
+
+.projectHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.projectName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.technologiesContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  li {
+    background-color: var(--accent);
+    color: var(--background);
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 5px;
+  }
+}
+
+.source {
+  display: flex;
+  gap: 10px;
+  a {
+    color: var(--accent);
+  }
+}
+
+@media (max-width: 767px) {
+  .projectsContainer {
+    margin-right: 10px;
+    padding-top: 40px;
+    h1 {
+      font-size: 50px;
+      justify-content: center;
+    }
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .singleProject {
+    border-left: none;
+    padding: 0px;
+  }
+
+  .projectHeader {
+  }
+}
