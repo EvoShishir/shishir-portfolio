@@ -4,6 +4,7 @@ import photo1 from "../../assets/main.jpg";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import AnimatedText from "../Animations/AnimatedText/AnimatedText";
+import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const HeroSection = () => {
   return (
@@ -15,11 +16,21 @@ const HeroSection = () => {
               <h1>
                 Hi, I&apos;m
                 <br />
-                <span>
-                  SH<span className="green">i</span>SH
-                  <span className="green">i</span>R
-                  <span className="green">!</span>
-                </span>
+                <TextReveal delay={2.5}>
+                  {/* <FadeInAnimation
+                    isInView={true}
+                    index={1}
+                    delay={1.25}
+                    duration={1}
+                    yindex={25}
+                  > */}
+                  <span>
+                    SH<span className="green">i</span>SH
+                    <span className="green">i</span>R
+                    <span className="green">!</span>
+                  </span>
+                  {/* </FadeInAnimation> */}
+                </TextReveal>
               </h1>
               <p className="title">
                 I&apos;m a <br />
@@ -42,8 +53,13 @@ const HeroSection = () => {
                   href="https://drive.google.com/file/d/1LczSc-i2H2ERGclWsmojIh4C1IZIrjhq/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="glitch"
                 >
-                  <AnimatedText datasetValue={"MY RESUME"}>
+                  <AnimatedText
+                    datasetValue={"MY RESUME"}
+                    startDelay={0}
+                    hoverEffect={true}
+                  >
                     MY RESUME
                   </AnimatedText>
                   <MdOutlineKeyboardDoubleArrowRight />

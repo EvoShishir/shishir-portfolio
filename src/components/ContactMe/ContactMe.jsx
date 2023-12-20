@@ -1,11 +1,47 @@
 import React from "react";
 import "./ContactMe.scss";
+import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
+import AnimatedText from "../Animations/AnimatedText/AnimatedText";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const ContactMe = () => {
+  const handleClick = () => {
+    window.location.href = "mailto:atefarmanshishir93@gmail.com";
+  };
+
   return (
-    <div id="contact">
-      <h1>Contact Me</h1>
-    </div>
+    <>
+      <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
+        <div id="contact" className="contactContainer">
+          <TextReveal delay={0.5} duration={1} width="100%">
+            <h1 className="heading">
+              Contact<span className="green">.</span>
+            </h1>
+          </TextReveal>
+          <p>
+            Are you interested in hiring me for a project or exploring
+            collaboration opportunities? Please feel free to reach out via email
+            at <span className="green">atefarmanshishir93@gmail.com</span>.
+            I&apos;m open to new opportunities and excited about potential
+            collaborations. Let&apos;s connect and discuss how we can work
+            together to achieve great things!
+          </p>
+          <button onClick={handleClick}>
+            <a href="mailto:atefarmanshishir93@gmail.com" className="glitch">
+              <AnimatedText
+                datasetValue={"Email Me!"}
+                startDelay={0}
+                hoverEffect={true}
+              >
+                Email Me!
+              </AnimatedText>
+              <MdOutlineKeyboardDoubleArrowRight />
+            </a>
+          </button>
+        </div>
+      </FadeInAnimation>
+    </>
   );
 };
 

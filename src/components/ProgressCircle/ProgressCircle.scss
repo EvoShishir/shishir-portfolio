@@ -1,0 +1,31 @@
+.progress-circle {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+
+.progress-circle .bg {
+  fill: none;
+  stroke: var(--navbarBackground);
+  stroke-width: 2;
+}
+
+.progress-circle .indicator {
+  fill: none;
+  stroke: var(--navItemColor);
+  stroke-width: 2;
+}
+
+.up-arrow {
+  position: fixed;
+  z-index: 999;
+  font-size: 24px;
+  color: var(--navItemColor);
+}

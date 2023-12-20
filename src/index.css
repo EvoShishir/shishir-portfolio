@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Poppins;
@@ -48,8 +49,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: white;
-    --accent: #3bbe83;
+    --background: rgb(235, 233, 233);
+    --accent: #30ae75;
     --color: black;
     --navItemColor: rgb(99, 99, 99);
     --navbarBackground: rgba(255, 255, 255, 0.304);

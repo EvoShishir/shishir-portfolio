@@ -18,15 +18,12 @@
   a {
     position: relative;
     text-decoration: none;
-    color: var(--color);
+    color: var(--accent);
     transition: 400ms;
     display: flex;
     align-items: center;
     gap: 5px;
     font-weight: bolder;
-  }
-  a:hover {
-    color: var(--activeNavColor);
   }
   a::after {
     content: "";
@@ -36,7 +33,7 @@
     width: 0;
     left: 0;
     background-color: var(--accent);
-    transition: 400ms;
+    transition: 700ms;
   }
   a:hover::after {
     width: 100%;
@@ -60,7 +57,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 5px;
-  padding-bottom: 2px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--accent);
 }
 
@@ -82,7 +79,7 @@
     border-radius: 25px;
     font-size: 12px;
     font-weight: 600;
-    padding: 3px 5px;
+    padding: 3px 8px;
   }
 }
 
@@ -113,8 +110,5 @@
   .singleProject {
     border-left: none;
     padding: 0px;
-  }
-
-  .projectHeader {
   }
 }

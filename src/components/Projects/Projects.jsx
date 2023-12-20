@@ -3,24 +3,30 @@ import "./Projects.scss";
 import data from "../../../data.json";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import { GoProjectSymlink } from "react-icons/go";
-import { FaExternalLinkAlt, FaLightbulb } from "react-icons/fa";
-import { FaGithub, FaRegLightbulb } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import AnimatedText from "../Animations/AnimatedText/AnimatedText";
+import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const Projects = ({ accentColor }) => {
+  const baseColor = "var(--color)";
+
   return (
     <>
-      <FadeInAnimation isInView={true} index={1} delay={0.05} duration={1}>
+      <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
         <div id="projects" className="projectsContainer">
-          <h1 className="heading">
-            Projects<span className="green">.</span>
-          </h1>
+          <TextReveal delay={0.5} duration={1} width="100%">
+            <h1 className="heading">
+              Projects<span className="green">.</span>
+            </h1>
+          </TextReveal>
           <div className="projects">
             {data.projects.map((project, index) => (
               <FadeInAnimation
                 key={index}
                 isInView={true}
                 index={index + 1}
-                delay={0.05 * (index + 1)}
+                delay={0.03 * (index + 1)}
                 duration={1}
               >
                 <section className="singleProject">
@@ -40,15 +46,33 @@ const Projects = ({ accentColor }) => {
                         href={project.liveProject}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="glitch"
                       >
-                        <FaExternalLinkAlt />
-                        <span className="green">Live link</span>
+                        <FaExternalLinkAlt
+                          style={{ color: `${baseColor}` }}
+                          size={11}
+                        />
+                        <AnimatedText
+                          datasetValue={"Live Demo"}
+                          startDelay={0}
+                          hoverEffect={true}
+                        >
+                          <span>Live Demo</span>
+                        </AnimatedText>
                       </a>
                     )}
                   </div>
                   <div className="technologiesContainer">
                     {project.technologies.map((tech, index) => (
-                      <li key={index}>{tech}</li>
+                      <FadeInAnimation
+                        key={index}
+                        isInView={true}
+                        index={index + 1}
+                        delay={0.01 * (index + 1)}
+                        duration={1}
+                      >
+                        <li key={index}>{tech}</li>
+                      </FadeInAnimation>
                     ))}
                   </div>
                   <p>{project.description}</p>
@@ -60,16 +84,22 @@ const Projects = ({ accentColor }) => {
                   <div className="source">
                     <div className="flexDesign">
                       <FaGithub style={{ color: `${accentColor}` }} size={23} />
-                      <b className="">Source Code:</b>
+                      <b className="">Github:</b>
                     </div>
-                    <div className="flexDesign">
+                    <div className="flexDesign glitch">
                       {project.sourceCode.frontend && (
                         <a
                           href={project.sourceCode.frontend}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Frontend
+                          <AnimatedText
+                            datasetValue={"Frontend"}
+                            startDelay={0}
+                            hoverEffect={true}
+                          >
+                            Frontend
+                          </AnimatedText>
                         </a>
                       )}
                       {project.sourceCode.backend && (
@@ -78,7 +108,13 @@ const Projects = ({ accentColor }) => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Backend
+                          <AnimatedText
+                            datasetValue={"Backend"}
+                            startDelay={0}
+                            hoverEffect={true}
+                          >
+                            Backend
+                          </AnimatedText>
                         </a>
                       )}
                     </div>

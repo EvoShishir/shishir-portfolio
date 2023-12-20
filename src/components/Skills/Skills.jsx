@@ -20,6 +20,7 @@ import {
   FaSass,
 } from "react-icons/fa6";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
+import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const Skills = () => {
   const skillsList = [
@@ -91,11 +92,13 @@ const Skills = () => {
 
   return (
     <>
-      <FadeInAnimation isInView={true} index={1} delay={0.05} duration={1}>
+      <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
         <div id="skills" className="skillsContainer">
-          <h1 className="heading">
-            Skills<span className="green">.</span>
-          </h1>
+          <TextReveal delay={0.5} duration={1} width="100%">
+            <h1 className="heading">
+              Skills<span className="green">.</span>
+            </h1>
+          </TextReveal>
           <div>
             <h4>
               Following are some of the <span className="green">skills</span> I

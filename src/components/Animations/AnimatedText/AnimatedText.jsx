@@ -1,12 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 const AnimatedText = ({
   children,
   datasetValue,
-  letterChangeInterval = 60,
-  startDelay = 1200,
+  letterChangeInterval = 100,
+  startDelay = 1000,
+  hoverEffect = false,
 }) => {
   const spanRef = useRef(null);
   const requestIdRef = useRef(null);
@@ -26,18 +28,22 @@ const AnimatedText = ({
           (deltaTime - startDelay) / letterChangeInterval
         );
 
-        spanRef.current.innerText = spanRef.current.innerText
+        const originalContent = spanRef.current.dataset.originalValue;
+        const updatedContent = originalContent
           .split("")
           .map((letter, index) => {
             if (index < iterations) {
-              return spanRef.current.dataset.value[index];
+              return originalContent[index];
             }
 
             return letters[Math.floor(Math.random() * 26)];
           })
           .join("");
 
-        if (iterations >= spanRef.current.dataset.value.length) {
+        spanRef.current.innerHTML = updatedContent;
+        spanRef.current.dataset.value = updatedContent;
+
+        if (iterations >= originalContent.length) {
           return;
         }
       }
@@ -45,23 +51,55 @@ const AnimatedText = ({
       requestIdRef.current = requestAnimationFrame(updateText);
     };
 
-    // Start the animation loop after the specified startDelay
-    const timeoutId = setTimeout(() => {
-      requestIdRef.current = requestAnimationFrame(updateText);
-    }, startDelay);
+    const startAnimation = () => {
+      // Reset animation state
+      startTime = null;
 
-    // Clean up the timeout and animation frame when the component unmounts
-    return () => {
-      clearTimeout(timeoutId);
-      cancelAnimationFrame(requestIdRef.current);
+      // Start the animation loop after the specified startDelay
+      const timeoutId = setTimeout(() => {
+        requestIdRef.current = requestAnimationFrame(updateText);
+      }, startDelay);
+
+      // Clean up the timeout and animation frame when the component unmounts
+      return () => {
+        clearTimeout(timeoutId);
+        cancelAnimationFrame(requestIdRef.current);
+      };
     };
-  }, [datasetValue, letterChangeInterval, startDelay]); // Re-run effect when datasetValue, letterChangeInterval, or startDelay changes
 
-  return (
-    <span ref={spanRef} data-value={datasetValue}>
-      {children}
-    </span>
-  );
+    if (hoverEffect) {
+      // Add event listener for hover effect on both the span and its parent button
+      const button = spanRef.current.closest("button");
+      if (button) {
+        button.addEventListener("mouseover", startAnimation);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+          button.removeEventListener("mouseover", startAnimation);
+        };
+      }
+
+      // Add event listener for hover effect on the span itself
+      spanRef.current.addEventListener("mouseover", startAnimation);
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+        spanRef.current.removeEventListener("mouseover", startAnimation);
+      };
+    } else {
+      // If not using hover effect, start animation immediately
+      return startAnimation();
+    }
+  }, [letterChangeInterval, startDelay, hoverEffect]);
+
+  useEffect(() => {
+    // Set the initial content and original value
+    spanRef.current.innerHTML = datasetValue;
+    spanRef.current.dataset.value = datasetValue;
+    spanRef.current.dataset.originalValue = datasetValue;
+  }, [datasetValue]);
+
+  return <span ref={spanRef}>{children}</span>;
 };
 
 export default AnimatedText;

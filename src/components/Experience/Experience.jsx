@@ -5,14 +5,17 @@ import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import { MdDoubleArrow } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { BiWorld } from "react-icons/bi";
+import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const Experience = ({ accentColor }) => {
   return (
     <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
       <div id="experience" className="experienceContainer">
-        <h1 className="heading">
-          Experience<span className="green">.</span>
-        </h1>
+        <TextReveal delay={0.5} duration={1} width="100%">
+          <h1 className="heading">
+            Experience<span className="green">.</span>
+          </h1>
+        </TextReveal>
         <div className="experience">
           {data.experiences.map((experience, index) => (
             <FadeInAnimation

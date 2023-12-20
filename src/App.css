@@ -24,7 +24,7 @@ ul li::before {
 }
 
 .glitch {
-  font-family: "Space Mono", monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 @media (max-width: 767px) {

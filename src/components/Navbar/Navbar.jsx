@@ -58,14 +58,14 @@ const Navbar = () => {
           <img src={logo} alt="" draggable="false" />
         </div>
         <div className="navItems">
-          <Link to="about" spy={true} smooth={true} offset={-53} duration={500}>
+          <Link to="about" spy={true} smooth={true} offset={-90} duration={500}>
             About
           </Link>
           <Link
             to="skills"
             spy={true}
             smooth={true}
-            offset={-53}
+            offset={-90}
             duration={500}
           >
             Skills
@@ -74,7 +74,7 @@ const Navbar = () => {
             to="experience"
             spy={true}
             smooth={true}
-            offset={-53}
+            offset={-90}
             duration={500}
           >
             Exprience
@@ -83,7 +83,7 @@ const Navbar = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-53}
+            offset={-90}
             duration={500}
           >
             Projects
@@ -92,7 +92,7 @@ const Navbar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-53}
+            offset={-90}
             duration={500}
           >
             Contact

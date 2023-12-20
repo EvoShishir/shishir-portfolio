@@ -42,6 +42,7 @@
     align-items: center;
     gap: 5px;
     transition: 400ms;
+    font-weight: 800;
   }
 
   button {
@@ -50,8 +51,7 @@
     justify-content: center;
     height: 50px;
     width: 180px;
-    font-family: "poppins";
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     background-color: var(--accent);
     color: black;
