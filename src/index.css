@@ -40,6 +40,26 @@
   }
 }
 
+[data-theme="light"] {
+  /* Light mode styles using custom color variables */
+  --background: rgb(235, 233, 233);
+  --accent: #30ae75;
+  --color: black;
+  --navItemColor: rgb(99, 99, 99);
+  --navbarBackground: rgba(255, 255, 255, 0.304);
+  --activeNavColor: black;
+}
+
+[data-theme="dark"] {
+  /* Dark mode styles using custom color variables */
+  --background: #121212;
+  --color: rgba(255, 255, 255, 0.87);
+  --navItemColor: rgba(255, 255, 255, 0.539);
+  --accent: #55e6a5;
+  --navbarBackground: rgba(0, 0, 0, 0.304);
+  --activeNavColor: white;
+}
+
 * {
   ::selection {
     color: white;

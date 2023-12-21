@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.scss";
 import logo from "../../assets/logoS.png";
+import DarkModeToggle from "react-dark-mode-toggle";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -11,9 +13,31 @@ import {
 import { FiGithub } from "react-icons/fi";
 
 const Navbar = () => {
+  // State to manage the color scheme
+  const [isDarkMode, setIsDarkMode] = useState(
+    window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
+  // Function to toggle between light and dark mode
+  const toggleColorMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  // useEffect to update the color scheme when the component mounts
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDarkMode ? "dark" : "light"
+    );
+  }, [isDarkMode]);
+
   return (
     <div className="navbar">
-      <div className="topNavbar">
+      <section className="topNavbar">
+        <div className="image">
+          <img src={logo} alt="" draggable="false" />
+        </div>
         <div className="navItemsTop">
           <a
             href="https://www.facebook.com/atefarmanshishir/"
@@ -51,12 +75,16 @@ const Navbar = () => {
             <FiGithub />
           </a>
         </div>
-      </div>
+        <div className="darkButton">
+          <DarkModeToggle
+            onChange={toggleColorMode}
+            checked={isDarkMode}
+            size={40}
+          />
+        </div>
+      </section>
 
       <div className="leftNavbar">
-        <div>
-          <img src={logo} alt="" draggable="false" />
-        </div>
         <div className="navItems">
           <Link to="about" spy={true} smooth={true} offset={-90} duration={500}>
             About
@@ -92,7 +120,7 @@ const Navbar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-90}
+            offset={-50}
             duration={500}
           >
             Contact

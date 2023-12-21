@@ -19,10 +19,10 @@ const ContactMe = () => {
               Contact<span className="green">.</span>
             </h1>
           </TextReveal>
-          <p>
+          <p className="contact">
             Are you interested in hiring me for a project or exploring
-            collaboration opportunities? Please feel free to reach out via email
-            at <span className="green">atefarmanshishir93@gmail.com</span>.
+            collaboration opportunities? Feel free to reach out via email at{" "}
+            <span className="green">atefarmanshishir93@gmail.com</span>
             I&apos;m open to new opportunities and excited about potential
             collaborations. Let&apos;s connect and discuss how we can work
             together to achieve great things!

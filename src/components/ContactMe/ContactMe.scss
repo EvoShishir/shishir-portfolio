@@ -5,10 +5,8 @@
   padding-top: 50px;
   margin-left: 70px;
   margin-right: 70px;
-  padding-bottom: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-bottom: 200px;
+
   gap: 30px;
 
   h1 {
@@ -59,16 +57,19 @@
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media (max-width: 767px) {
   .contactContainer {
     max-width: 400px;
     margin-right: 8px;
     margin-top: 80px;
-    // display: flex;
-    // flex-direction: column-reverse;
-    // justify-content: center;
     h1 {
-      font-size: 50px;
+      font-size: 47px;
       line-height: 55px;
     }
   }
