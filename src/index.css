@@ -66,14 +66,3 @@
     background: rgb(71, 70, 70);
   }
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: rgb(235, 233, 233);
-    --accent: #30ae75;
-    --color: black;
-    --navItemColor: rgb(99, 99, 99);
-    --navbarBackground: rgba(255, 255, 255, 0.304);
-    --activeNavColor: black;
-  }
-}
