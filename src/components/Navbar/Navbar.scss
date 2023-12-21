@@ -31,8 +31,12 @@
 }
 
 .darkButton {
-  padding-right: 10px;
-  transform: translateY(3px);
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-right: 10px;
+  color: var(--accent);
 }
 
 .navItemsTop {

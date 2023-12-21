@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import "./Navbar.scss";
 import logo from "../../assets/logoS.png";
 import DarkModeToggle from "react-dark-mode-toggle";
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 import {
   FaFacebookF,
@@ -11,8 +12,10 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
+import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
+  const accentColor = "var(--accent)";
   // State to manage the color scheme
   const [isDarkMode, setIsDarkMode] = useState(
     window.matchMedia &&
@@ -76,10 +79,15 @@ const Navbar = () => {
           </a>
         </div>
         <div className="darkButton">
+          <DarkModeSwitch
+            checked={isDarkMode}
+            onChange={toggleColorMode}
+            size={25}
+          />
           <DarkModeToggle
             onChange={toggleColorMode}
             checked={isDarkMode}
-            size={40}
+            size={50}
           />
         </div>
       </section>
