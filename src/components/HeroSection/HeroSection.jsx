@@ -17,19 +17,11 @@ const HeroSection = () => {
                 Hi, I&apos;m
                 <br />
                 <TextReveal delay={2.5}>
-                  {/* <FadeInAnimation
-                    isInView={true}
-                    index={1}
-                    delay={1.25}
-                    duration={1}
-                    yindex={25}
-                  > */}
                   <span>
                     SH<span className="green">i</span>SH
                     <span className="green">i</span>R
                     <span className="green">!</span>
                   </span>
-                  {/* </FadeInAnimation> */}
                 </TextReveal>
               </h1>
               <p className="title">

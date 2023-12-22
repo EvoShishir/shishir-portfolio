@@ -7,7 +7,7 @@ const AnimatedText = ({
   children,
   datasetValue,
   letterChangeInterval = 100,
-  startDelay = 1000,
+  startDelay = 1200,
   hoverEffect = false,
 }) => {
   const spanRef = useRef(null);
@@ -68,24 +68,17 @@ const AnimatedText = ({
     };
 
     if (hoverEffect) {
-      // Add event listener for hover effect on both the span and its parent button
-      const button = spanRef.current.closest("button");
-      if (button) {
-        button.addEventListener("mouseover", startAnimation);
+      // Add event listener for hover effect on the parent button
+      const buttonOrAnchor =
+        spanRef.current.closest("button") || spanRef.current.closest("a");
+      if (buttonOrAnchor) {
+        buttonOrAnchor.addEventListener("mouseenter", startAnimation);
 
         // Clean up the event listener when the component unmounts
         return () => {
-          button.removeEventListener("mouseover", startAnimation);
+          buttonOrAnchor.removeEventListener("mouseenter", startAnimation);
         };
       }
-
-      // Add event listener for hover effect on the span itself
-      spanRef.current.addEventListener("mouseover", startAnimation);
-
-      // Clean up the event listener when the component unmounts
-      return () => {
-        spanRef.current.removeEventListener("mouseover", startAnimation);
-      };
     } else {
       // If not using hover effect, start animation immediately
       return startAnimation();
