@@ -94,14 +94,14 @@ const Navbar = () => {
 
       <div className="leftNavbar">
         <div className="navItems">
-          <Link to="about" spy={true} smooth={true} offset={-90} duration={500}>
+          <Link to="about" spy={true} smooth={true} offset={-80} duration={500}>
             About
           </Link>
           <Link
             to="skills"
             spy={true}
             smooth={true}
-            offset={-90}
+            offset={-80}
             duration={500}
           >
             Skills
@@ -110,7 +110,7 @@ const Navbar = () => {
             to="experience"
             spy={true}
             smooth={true}
-            offset={-90}
+            offset={-100}
             duration={500}
           >
             Exprience
@@ -128,7 +128,7 @@ const Navbar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-50}
+            offset={-10}
             duration={500}
           >
             Contact

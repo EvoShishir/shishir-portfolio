@@ -32,7 +32,6 @@
 
 .darkButton {
   display: flex;
-  // flex-direction: column;
   align-items: center;
   gap: 5px;
   margin-right: 10px;
@@ -59,7 +58,7 @@
 }
 
 .leftNavbar {
-  background-color: var(--navbarBackground);
+  background-color: var(--background);
   backdrop-filter: blur(10px);
   z-index: 997;
   position: fixed;
