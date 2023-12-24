@@ -40,13 +40,12 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="heroButtons">
-              <button>
-                <a
-                  href="https://drive.google.com/file/d/1LczSc-i2H2ERGclWsmojIh4C1IZIrjhq/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="glitch"
-                >
+              <a
+                href="https://drive.google.com/file/d/1LczSc-i2H2ERGclWsmojIh4C1IZIrjhq/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="glitch">
                   <AnimatedText
                     datasetValue={"MY RESUME"}
                     startDelay={0}
@@ -55,8 +54,8 @@ const HeroSection = () => {
                     MY RESUME
                   </AnimatedText>
                   <MdOutlineKeyboardDoubleArrowRight />
-                </a>
-              </button>
+                </button>
+              </a>
             </div>
           </div>
           <div>
