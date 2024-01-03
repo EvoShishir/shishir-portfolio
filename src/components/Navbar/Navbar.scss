@@ -19,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 400ms ease-in-out;
   img {
     width: 100%;
     padding-left: 10px;
@@ -68,6 +69,7 @@
   margin-top: 300px;
   margin-left: -236px;
   transform: rotate(90deg);
+  transition: 400ms ease-in-out;
 }
 
 .navItems {

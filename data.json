@@ -65,10 +65,16 @@
         "Users can add products to cart and then checkout using Stripe paymentgateway.",
         "Admin can manage the products, categories and user roles. Also the analytics ofproducts and users is also available on admin panel dashboard."
       ],
-      "sourceCode": {
-        "frontend": "https://github.com/EvoShishir/shopping-website",
-        "backend": "https://github.com/EvoShishir/shopping-server"
-      },
+      "sourceCode": [
+        {
+          "label": "Frontend",
+          "url": "https://github.com/EvoShishir/shopping-website"
+        },
+        {
+          "label": "Backend",
+          "url": "https://github.com/EvoShishir/shopping-server"
+        }
+      ],
       "liveProject": "https://shopping-website-shishir.netlify.app"
     },
     {
@@ -80,9 +86,12 @@
         "Elevating user engagement, dynamic Framer Motion animations bring a modern touch to the portfolio's visual appeal.",
         "Crafted with SASS, the styles contribute to an elegant and cohesive design, reflecting a keen eye for aesthetics."
       ],
-      "sourceCode": {
-        "frontend": "https://github.com/EvoShishir/shishir-portfolio"
-      },
+      "sourceCode": [
+        {
+          "label": "Source Code",
+          "url": "https://github.com/EvoShishir/shishir-portfolio"
+        }
+      ],
       "liveProject": "https://atefarmanshishir.netlify.app/"
     },
     {
@@ -94,9 +103,12 @@
         "Anyone can just paste a link and get it shortened for free.",
         "Links do not expire and stay the same way as you created."
       ],
-      "sourceCode": {
-        "frontend": "https://github.com/EvoShishir/urlshorty"
-      }
+      "sourceCode": [
+        {
+          "label": "Source Code",
+          "url": "https://github.com/EvoShishir/urlshorty"
+        }
+      ]
     },
     {
       "name": "E-commerce API",
@@ -106,9 +118,12 @@
         "An account requires a unique phone number to register.",
         "Passwords can be reset using email."
       ],
-      "sourceCode": {
-        "backend": "https://github.com/EvoShishir/EcommerceAPI"
-      }
+      "sourceCode": [
+        {
+          "label": "Source Code",
+          "url": "https://github.com/EvoShishir/EcommerceAPI"
+        }
+      ]
     }
   ]
 }

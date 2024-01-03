@@ -84,39 +84,25 @@ const Projects = ({ accentColor }) => {
                   <div className="source">
                     <div className="flexDesign">
                       <FaGithub style={{ color: `${accentColor}` }} size={23} />
-                      <b className="">Github:</b>
+                      <b className="glitch">Github:</b>
                     </div>
                     <div className="flexDesign glitch">
-                      {project.sourceCode.frontend && (
+                      {project.sourceCode.map((source, index) => (
                         <a
-                          href={project.sourceCode.frontend}
+                          key={index}
+                          href={source.url}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <AnimatedText
-                            datasetValue={"Frontend"}
+                            datasetValue={source.label}
                             startDelay={0}
                             hoverEffect={true}
                           >
-                            Frontend
+                            {source.label}
                           </AnimatedText>
                         </a>
-                      )}
-                      {project.sourceCode.backend && (
-                        <a
-                          href={project.sourceCode.backend}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <AnimatedText
-                            datasetValue={"Backend"}
-                            startDelay={0}
-                            hoverEffect={true}
-                          >
-                            Backend
-                          </AnimatedText>
-                        </a>
-                      )}
+                      ))}
                     </div>
                   </div>
                 </section>

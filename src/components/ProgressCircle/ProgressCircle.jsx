@@ -34,8 +34,13 @@ const ProgressCircle = () => {
   const circleRadius = 30;
 
   const circleAnimation = {
-    translateY: [30, 0],
+    translateY: [90, 0],
     opacity: [0, 1],
+  };
+
+  const hideCircleAnimation = {
+    translateY: [0, 60],
+    opacity: [1, 0],
   };
 
   return (
@@ -45,10 +50,9 @@ const ProgressCircle = () => {
         right: "60px",
         bottom: "60px",
         cursor: "pointer",
-        display: !showCircle ? "none" : "",
       }}
       onClick={scrollToTop}
-      animate={showCircle ? circleAnimation : {}}
+      animate={showCircle ? circleAnimation : hideCircleAnimation}
     >
       <svg
         width={circleRadius * 2}

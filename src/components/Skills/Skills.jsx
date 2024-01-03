@@ -110,8 +110,8 @@ const Skills = () => {
                   <FadeInAnimation
                     isInView={true}
                     index={index}
-                    duration={0.6}
-                    delay={0.03}
+                    duration={1}
+                    delay={0.1}
                   >
                     <p>{skill.logo}</p>
                     <small>{skill.title}</small>
