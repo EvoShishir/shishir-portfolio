@@ -1,6 +1,21 @@
 {
   "experiences": [
     {
+      "company": "CSM Bangladesh Limited",
+      "link": "https://www.csmbangladesh.com/",
+      "position": "Frontend Developer",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "June, 2024",
+      "endDate": "Present",
+      "responsibilities": [
+        "Build and maintain responsive and visually appealing user interfaces using HTML and CSS within the Jupiter Platform.",
+        "Working with the custom CMS, Jupiter Platform, to create and manage web content efficiently.",
+        "Work closely with the graphics team to ensure that design concepts are accurately translated into functional web elements.",
+        "Partner with the content team to integrate and optimize textual and media content for a seamless user experience.",
+        "Ensure cross-browser compatibility and troubleshoot frontend issues to maintain high performance and user satisfaction."
+      ]
+    },
+    {
       "company": "AAK TELE-SCIENCE, INC",
       "link": "https://www.linkedin.com/company/aak-telesciences/mycompany/",
       "position": "Frontend Developer(React.JS)",
