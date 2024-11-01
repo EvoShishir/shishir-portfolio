@@ -6,7 +6,7 @@
   font-family: "poppins";
   margin-top: 100px;
 
-  h1 {
+  .commonHeading {
     font-size: 70px;
     font-weight: 900;
   }
@@ -16,9 +16,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 100px;
 
   img {
-    width: 80%;
+    width: 100%;
     border-radius: 50%;
     border: 2px solid var(--accent);
   }
@@ -26,14 +27,19 @@
 
 @media (max-width: 767px) {
   .about {
-    max-width: 400px;
     margin-right: 10px;
     padding-top: 100px;
-    img {
-      width: 80%;
-    }
-    h1 {
+    .commonHeading {
       font-size: 47px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about {
+    padding-top: 40px;
+    .commonHeading {
+      font-size: 50px;
     }
   }
   .aboutContainer {
@@ -41,26 +47,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    img {
-      width: 90%;
-      border-radius: 50%;
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .about {
-    max-width: 900px;
-    padding-top: 40px;
-    h1 {
-      font-size: 50px;
-    }
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .about {
-    max-width: 1050px;
+    gap: 10px;
   }
 }

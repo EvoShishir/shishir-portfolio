@@ -1,4 +1,3 @@
-import React from "react";
 import "./Projects.scss";
 import data from "../../../data.json";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
@@ -12,13 +11,13 @@ const Projects = ({ accentColor }) => {
   const baseColor = "var(--color)";
 
   return (
-    <>
+    <section className="container">
       <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
         <div id="projects" className="projectsContainer">
           <TextReveal delay={0.5} duration={1} width="100%">
-            <h1 className="heading">
+            <p className="heading commonHeading">
               Projects<span className="green">.</span>
-            </h1>
+            </p>
           </TextReveal>
           <div className="projects">
             {data.projects.map((project, index) => (
@@ -111,7 +110,7 @@ const Projects = ({ accentColor }) => {
           </div>
         </div>
       </FadeInAnimation>
-    </>
+    </section>
   );
 };
 

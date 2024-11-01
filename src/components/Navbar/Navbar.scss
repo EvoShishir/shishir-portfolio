@@ -59,35 +59,33 @@
 }
 
 .leftNavbar {
-  background-color: var(--background);
+  background-color: var(--navbarBackground);
   backdrop-filter: blur(10px);
   z-index: 997;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 300px;
-  margin-left: -236px;
-  transform: rotate(90deg);
+  left: 0;
+  top: 79px;
+  height: 100vh;
   transition: 400ms ease-in-out;
 }
 
 .navItems {
-  display: flex;
   cursor: pointer;
   .active {
-    border-top: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
     color: var(--activeNavColor);
   }
   a {
     text-decoration: none;
     color: var(--navItemColor);
-    border-top: 2px solid rgba(0, 0, 0, 0);
+    border-right: 2px solid rgba(0, 0, 0, 0);
     padding: 20px;
     transition: 400ms ease-in-out;
+    display: block;
+    writing-mode: vertical-lr;
   }
   a:hover {
-    border-top: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
     color: var(--accent);
   }
 }
@@ -107,7 +105,6 @@
 
   .leftNavbar {
     font-size: 14px;
-    margin-top: 257px;
-    margin-left: -206px;
+    top: 68.59px;
   }
 }

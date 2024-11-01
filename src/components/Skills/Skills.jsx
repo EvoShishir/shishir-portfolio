@@ -1,4 +1,3 @@
-import React from "react";
 import "./Skills.scss";
 import { IoLogoFirebase, IoLogoJavascript } from "react-icons/io5";
 import {
@@ -91,13 +90,13 @@ const Skills = () => {
   ];
 
   return (
-    <>
+    <section className="container">
       <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
         <div id="skills" className="skillsContainer">
           <TextReveal delay={0.5} duration={1} width="100%">
-            <h1 className="heading">
+            <p className="heading commonHeading">
               Skills<span className="green">.</span>
-            </h1>
+            </p>
           </TextReveal>
           <div>
             <h4>
@@ -122,7 +121,7 @@ const Skills = () => {
           </div>
         </div>
       </FadeInAnimation>
-    </>
+    </section>
   );
 };
 

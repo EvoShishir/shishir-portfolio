@@ -1,4 +1,3 @@
-import React from "react";
 import "./AboutMe.scss";
 import main2 from "../../assets/main2.jpg";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
@@ -6,13 +5,13 @@ import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const AboutMe = () => {
   return (
-    <>
+    <section className="container">
       <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
         <div id="about" className="about">
           <TextReveal delay={0.5} duration={1} width="100%">
-            <h1 className="heading">
+            <p className="heading commonHeading">
               About Me<span className="green">.</span>
-            </h1>
+            </p>
           </TextReveal>
           <div className="aboutContainer">
             <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
@@ -62,7 +61,7 @@ const AboutMe = () => {
           </div>
         </div>
       </FadeInAnimation>
-    </>
+    </section>
   );
 };
 

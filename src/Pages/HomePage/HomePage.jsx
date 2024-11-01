@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import "./HomePage.scss";
 import Layout from "../../components/Layout/Layout";
@@ -38,15 +38,13 @@ const HomePage = () => {
         loading={loading}
       />
       <Layout>
-        <div className="home">
-          <HeroSection accentColor={accentColor} />
-          <AboutMe accentColor={accentColor} />
-          <Skills accentColor={accentColor} />
-          <Banner accentColor={accentColor} />
-          <Experience accentColor={accentColor} />
-          <Projects accentColor={accentColor} />
-          <ContactMe accentColor={accentColor} />
-        </div>
+        <HeroSection accentColor={accentColor} />
+        <AboutMe accentColor={accentColor} />
+        <Skills accentColor={accentColor} />
+        <Banner accentColor={accentColor} />
+        <Experience accentColor={accentColor} />
+        <Projects accentColor={accentColor} />
+        <ContactMe accentColor={accentColor} />
       </Layout>
     </>
   );

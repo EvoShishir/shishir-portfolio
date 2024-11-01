@@ -1,4 +1,3 @@
-import React from "react";
 import "./heroSection.scss";
 import photo1 from "../../assets/main.jpg";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
@@ -8,15 +7,15 @@ import TextReveal from "../Animations/TextReveal/TextReveal";
 
 const HeroSection = () => {
   return (
-    <>
+    <section className="container">
       <FadeInAnimation isInView={true} index={1} delay={1} duration={1}>
         <div className="heroSection">
           <div>
             <div>
               <h1>
-                Hi, I&apos;m
-                <br />
                 <TextReveal delay={2.5}>
+                  Hi, I&apos;m
+                  <br className="heroBreak" />{" "}
                   <span>
                     SH<span className="green">i</span>SH
                     <span className="green">i</span>R
@@ -25,7 +24,7 @@ const HeroSection = () => {
                 </TextReveal>
               </h1>
               <p className="title">
-                I&apos;m a <br />
+                I&apos;m a <br className="heroBreak" />
                 <span className="green glitch">
                   <b>
                     <AnimatedText datasetValue="FULLSTACK WEB DEVELOPER">
@@ -63,7 +62,7 @@ const HeroSection = () => {
           </div>
         </div>
       </FadeInAnimation>
-    </>
+    </section>
   );
 };
 

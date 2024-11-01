@@ -1,4 +1,3 @@
-import React from "react";
 import "./ContactMe.scss";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import AnimatedText from "../Animations/AnimatedText/AnimatedText";
@@ -11,13 +10,13 @@ const ContactMe = () => {
   };
 
   return (
-    <>
+    <section className="container">
       <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
         <div id="contact" className="contactContainer">
           <TextReveal delay={0.5} duration={1} width="100%">
-            <h1 className="heading">
+            <p className="heading commonHeading">
               Contact<span className="green">.</span>
-            </h1>
+            </p>
           </TextReveal>
           <p className="contact">
             Are you interested in hiring me for a project or exploring
@@ -41,7 +40,7 @@ const ContactMe = () => {
           </button>
         </div>
       </FadeInAnimation>
-    </>
+    </section>
   );
 };
 
