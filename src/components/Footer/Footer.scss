@@ -1,8 +1,12 @@
 footer {
   max-width: 1300px;
-  margin: auto;
-  margin-left: 70px;
-  margin-right: 70px;
   text-align: center;
   font-family: "poppins";
+}
+
+@media (max-width: 470px) {
+  footer {
+    margin-left: 70px;
+    margin-right: 20px;
+  }
 }

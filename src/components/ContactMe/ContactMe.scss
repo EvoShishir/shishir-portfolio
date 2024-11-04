@@ -2,13 +2,10 @@
   font-family: "poppins";
   max-width: 1300px;
   margin: auto;
-  // padding-top: 50px;
   margin-left: 70px;
   margin-right: 70px;
   padding-bottom: 200px;
-  // margin-top: 150px;
   padding-top: 150px;
-
   gap: 30px;
 
   .commonHeading {
@@ -20,7 +17,7 @@
   p {
     max-width: 700px;
     margin: auto;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     text-align: center;
   }
 
@@ -63,6 +60,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 767px) {
@@ -71,7 +70,6 @@
     padding-top: 250px;
     .commonHeading {
       font-size: 47px;
-      line-height: 55px;
     }
   }
 }

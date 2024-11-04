@@ -113,7 +113,7 @@ const Navbar = () => {
             offset={-100}
             duration={500}
           >
-            Exprience
+            Experience
           </Link>
           <Link
             to="projects"
