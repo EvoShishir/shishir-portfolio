@@ -42,6 +42,7 @@
 
 [data-theme="light"] {
   /* Light mode styles using custom color variables */
+  --cursor-color: #33333369;
   --background: rgb(235, 233, 233);
   --accent: #30ae75;
   --color: black;
@@ -52,6 +53,7 @@
 
 [data-theme="dark"] {
   /* Dark mode styles using custom color variables */
+  --cursor-color: #ffffff73;
   --background: #121212;
   --color: rgba(255, 255, 255, 0.87);
   --navItemColor: rgba(255, 255, 255, 0.539);
