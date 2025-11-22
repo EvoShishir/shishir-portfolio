@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.scss";
@@ -16,23 +18,33 @@ import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = () => {
   const accentColor = "var(--accent)";
-  // State to manage the color scheme
-  const [isDarkMode, setIsDarkMode] = useState(
-    window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
+  // State to manage the color scheme - default to dark mode
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Function to toggle between light and dark mode
   const toggleColorMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  // useEffect to update the color scheme when the component mounts
+  // useEffect to initialize theme from browser preference and update when changed
   useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDarkMode ? "dark" : "light"
-    );
+    // Check browser preference on mount (client-side only)
+    if (typeof window !== "undefined" && window.matchMedia) {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setIsDarkMode(prefersDark);
+    }
+  }, []);
+
+  // useEffect to update the color scheme when the component mounts or isDarkMode changes
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDarkMode ? "dark" : "light"
+      );
+    }
   }, [isDarkMode]);
 
   return (
@@ -88,6 +100,7 @@ const Navbar = () => {
             onChange={toggleColorMode}
             checked={isDarkMode}
             size={50}
+            className="darkToggleButton"
           />
         </div>
       </section>

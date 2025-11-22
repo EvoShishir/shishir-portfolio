@@ -37,6 +37,10 @@
   gap: 5px;
   margin-right: 10px;
   color: var(--accent);
+
+  .darkToggleButton {
+    overflow: visible !important;
+  }
 }
 
 .navItemsTop {
@@ -64,7 +68,7 @@
   z-index: 997;
   position: fixed;
   left: 0;
-  top: 79px;
+  top: 77px;
   height: 100vh;
   transition: 400ms ease-in-out;
 }

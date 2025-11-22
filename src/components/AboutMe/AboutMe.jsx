@@ -1,5 +1,4 @@
 import "./AboutMe.scss";
-import main2 from "../../assets/main2.jpg";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import TextReveal from "../Animations/TextReveal/TextReveal";
 
@@ -16,7 +15,7 @@ const AboutMe = () => {
           <div className="aboutContainer">
             <FadeInAnimation isInView={true} index={1} delay={0.2} duration={1}>
               <div>
-                <img src={main2} draggable="false" />
+                <img src="/main2.jpg" draggable="false" />
               </div>
             </FadeInAnimation>
             <div>

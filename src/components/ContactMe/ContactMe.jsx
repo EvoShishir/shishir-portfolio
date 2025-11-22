@@ -1,3 +1,5 @@
+"use client";
+
 import "./ContactMe.scss";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import AnimatedText from "../Animations/AnimatedText/AnimatedText";

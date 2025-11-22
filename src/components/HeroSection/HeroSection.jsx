@@ -1,5 +1,4 @@
 import "./heroSection.scss";
-import photo1 from "../../assets/main.jpg";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import FadeInAnimation from "../Animations/FadeInAnimation/FadeInAnimation";
 import AnimatedText from "../Animations/AnimatedText/AnimatedText";
@@ -58,7 +57,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div>
-            <img src={photo1} alt="" draggable="false" />
+            <img src="/main.jpg" alt="" draggable="false" />
           </div>
         </div>
       </FadeInAnimation>

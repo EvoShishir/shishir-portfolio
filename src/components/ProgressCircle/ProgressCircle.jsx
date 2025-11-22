@@ -1,3 +1,5 @@
+"use client";
+
 // ProgressCircle.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";

@@ -1,18 +1,29 @@
 {
   "experiences": [
     {
+      "company": "The Digital Dude",
+      "link": "https://the-digital-dude.vercel.app/",
+      "position": "Software Developer",
+      "location": "Dhaka, Bangladesh(Part-time, Remote)",
+      "startDate": "June, 2025",
+      "endDate": "Present",
+      "responsibilities": [
+        "Contributing to the end-to-end development and deployment of scalable web applications.",
+        "Building SEO-optimized websites using Next.js, Redux, TypeScript, Framer Motion, and related technologies.",
+        "Developing custom CRM solutions tailored to meet diverse professional requirements.",
+        "Developing mobile apps using React Native and Expo."
+      ]
+    },
+    {
       "company": "CSM Bangladesh Limited",
       "link": "https://www.csmbangladesh.com/",
-      "position": "Frontend Web Developer(HTML, CSS, CMS)",
+      "position": "Software Developer",
       "location": "Dhaka, Bangladesh(On-site)",
       "startDate": "June, 2024",
       "endDate": "Present",
       "responsibilities": [
-        "Build and maintain responsive and visually appealing user interfaces using HTML and CSS within the Jupiter Platform.",
-        "Working with the custom CMS, Jupiter Platform, to create and manage web content efficiently.",
-        "Work closely with the graphics team to ensure that design concepts are accurately translated into functional web elements.",
-        "Partner with the content team to integrate and optimize textual and media content for a seamless user experience.",
-        "Ensure cross-browser compatibility and troubleshoot frontend issues to maintain high performance and user satisfaction."
+        "Creating various components and hooks in the frontend for code reusability and making response times of applications faster.",
+        "Leading and contributing to the development of a HRM system that handles lunch management, employee attendance, leave management and many more."
       ]
     },
     {
@@ -25,9 +36,7 @@
       "responsibilities": [
         "Designed and implemented responsive interfaces for optimal user experiences.",
         "Proficient in using Redux for efficient data flow in complex applications.",
-        "Created and maintained modular, reusable components for streamlined development.",
-        "Implemented best practices for consistent experiences across browsers.",
-        "Worked closely with designers to translate mockups into interactive React components."
+        "Created and maintained modular, reusable components for streamlined development."
       ]
     },
     {
@@ -64,6 +73,66 @@
 
   "projects": [
     {
+      "name": "Jonobol",
+      "technologies": [
+        "React.JS",
+        "Typescript",
+        "TailwindCSS",
+        "Tanstack Query",
+        "Redux",
+        "Node.JS",
+        "Express.JS",
+        "MongoDB",
+        "VPS"
+      ],
+      "description": "Jonobol is a human resource management system built using React, TypeScript, Tailwind, Express, and MongoDB. Includes a lunch ordering system, attendance management, leave management, and many more.",
+      "features": [
+        "Improved admin operations by over 60% through real-time dashboards.",
+        "Ensured smooth UX with Formik/Yup form validation, responsive UI using ShadCN.",
+        "Advanced permission management system with permission assignment for individual users allowing fine-grained control over user privileges."
+      ],
+      "sourceCode": [
+        {
+          "label": "Private for Organization",
+          "url": "#"
+        },
+        {
+          "label": "",
+          "url": ""
+        }
+      ],
+      "liveProject": "https://hrm.csmbangladesh.com/"
+    },
+    {
+      "name": "RentalEase",
+      "technologies": [
+        "React.JS",
+        "Typescript",
+        "SCSS",
+        "Redux",
+        "Node.JS",
+        "Express.JS",
+        "MongoDB"
+      ],
+      "description": "RentalEase is a property compliance management system where agencies, property managers, and technicians collaborate to manage properties, perform compliance jobs, generate reports, and handle invoices efficiently through a centralized admin dashboard.",
+      "features": [
+        "Streamlined workflow for managing agencies, property managers, properties, and assigned technicians.",
+        "Automated compliance job scheduling, tracking, invoicing, and reporting.",
+        "Centralized admin control with real-time insights and efficient job-to-invoice lifecycle management"
+      ],
+      "sourceCode": [
+        {
+          "label": "Private for Organization",
+          "url": "#"
+        },
+        {
+          "label": "",
+          "url": ""
+        }
+      ],
+      "liveProject": "https://rentalease-client.vercel.app/"
+    },
+    {
       "name": "ShopVibe",
       "technologies": [
         "React.JS",
@@ -74,11 +143,11 @@
         "MongoDB",
         "Stripe"
       ],
-      "description": "This store is built using React.JS for the frontend, Express.JS and Node.JS for thebackend. MongoDB is used for the database management system. The cartfunctionality is created by using Redux to store the cart items. Stripe payment is available in this application. Also some MaterialUI components are used for niceraesthetics.",
+      "description": "This store is built using React.JS for the frontend, Express.JS and Node.JS for the backend. MongoDB is used for the database management system. The cart functionality is created by using Redux to store the cart items. Stripe payment is available in this application. Also some MaterialUI components are used for nicer aesthetics.",
       "features": [
         "Uses can create account with their passwords hashed in the backend.",
-        "Users can add products to cart and then checkout using Stripe paymentgateway.",
-        "Admin can manage the products, categories and user roles. Also the analytics ofproducts and users is also available on admin panel dashboard."
+        "Users can add products to cart and then checkout using Stripe payment gateway.",
+        "Admin can manage the products, categories and user roles. Also the analytics of products and users is also available on admin panel dashboard."
       ],
       "sourceCode": [
         {

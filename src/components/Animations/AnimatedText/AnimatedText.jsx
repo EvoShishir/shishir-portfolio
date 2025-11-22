@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
